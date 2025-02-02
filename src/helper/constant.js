@@ -1,0 +1,1 @@
+export const coinGechoUrl="https://api.coingecko.com/api/v3";
