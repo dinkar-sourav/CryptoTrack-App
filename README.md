@@ -22,16 +22,16 @@ Crypto Tracker is a web application that provides real-time information about va
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home_page.png)
+![Home Page](1.png)
 
 ### Banner
-![Banner](screenshots/banner.png)
+![Banner](2.png)
 
 ### Coin Table
-![Coin Table](screenshots/coin_table.png)
+![Coin Table](3.png)
 
 ### NavBar
-![NavBar](screenshots/navbar.png)
+![NavBar](4.png)
 
 ## Getting Started
 
