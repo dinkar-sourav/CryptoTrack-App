@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import { fetchCoinDetails } from "../services/fetchCoinDetails";
 import parse from 'html-react-parser'
 import store from "../zustand/store";
+import MyLoader from "../Components/PageLoader/PageLoader";
 function CoinDetails(){
     const {curr}=store();
     const {coinId}=useParams();
@@ -12,7 +13,7 @@ function CoinDetails(){
     })
     
     if(isLoading){
-        return <div>...Loading</div>
+        return <MyLoader/>
     }
     if(isError){
         return <div>Error :Something went</div>
