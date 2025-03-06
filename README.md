@@ -8,6 +8,8 @@ Crypto Tracker is a web application that provides real-time information about va
 - Switch between different currencies (USD, INR)
 - Pagination for viewing more cryptocurrencies
 - Responsive design for mobile and desktop
+- Lazy loading for improved performance
+- Error boundaries for robust error handling
 
 ## Technologies Used
 
@@ -23,7 +25,6 @@ Crypto Tracker is a web application that provides real-time information about va
 
 ### Home Page
 ![Home Page](1.png)
-
 ### Banner
 ![Banner](2.png)
 
@@ -32,6 +33,12 @@ Crypto Tracker is a web application that provides real-time information about va
 
 ### NavBar
 ![NavBar](4.png)
+
+### Currency Switcher
+![Currency Switcher](5.png)
+
+### Pagination
+![Pagination](6.png)
 
 ## Getting Started
 
