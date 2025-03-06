@@ -1,16 +1,11 @@
 import { useParams } from "react-router-dom";
-import { useQuery } from "react-query";
-import { fetchCoinDetails } from "../services/fetchCoinDetails";
 import parse from 'html-react-parser'
-import store from "../zustand/store";
 import MyLoader from "../Components/PageLoader/PageLoader";
+import CoinInfoCont from "../Components/CoinInfo/CoinInfoCont";
+import useFetchDetails from "../hooks/usefetchcoinDetails";
 function CoinDetails(){
-    const {curr}=store();
     const {coinId}=useParams();
-    const {isError,isLoading,data}=useQuery(["coins",coinId],()=>fetchCoinDetails(coinId),{
-        cacheTime: 1000*60*2,
-        staleTime:1000*60*2,
-    })
+   const {curr,isError,isLoading,data}=useFetchDetails(coinId)
     
     if(isLoading){
         return <MyLoader/>
@@ -69,9 +64,13 @@ function CoinDetails(){
             </div>
           </div>
           <div
-           className="w-full p-6 md:w-2/3"
+           className="w-full ml-5"
           >
-             Coin Information
+             <CoinInfoCont
+             
+                coinId={coinId}
+             />
+             
           </div>
        </div>
     )

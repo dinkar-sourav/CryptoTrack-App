@@ -2,12 +2,12 @@ import { Routes,Route } from "react-router-dom";
 import Layout from "../../pages/layout";
 import {lazy,Suspense} from 'react'
 import MyLoader from "../PageLoader/PageLoader";
-
+import Errorboundary from "../ErrorBoundary/ErrorBoundary";
 const Home=lazy(()=>import("../../pages/home"))
 const CoinDetails=lazy(()=>import("../../pages/coinDetails"))
 function Routing(){
     return (
-       <>
+       <Errorboundary>
          <Routes>
             <Route path="/" element={<Layout/>}>
                 <Route index element={
@@ -27,7 +27,7 @@ function Routing(){
                 
             </Route>
          </Routes>
-       </>
+       </Errorboundary>
     )
 }
 
